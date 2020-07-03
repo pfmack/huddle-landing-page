@@ -7,17 +7,193 @@ html {
 
 
 body {
-    background-color: rgb(103, 75, 175);
+    background: hsl(257, 40%, 49%);
+    color:#FFFFFF;
     font-family: 'Open Sans', sans-serif;
 	font-size: 1em; 
-	height: 100%;
+    height: 100%;
+    display: flex;
+	justify-content: center; 
+	align-items: center;
+	flex-flow: row wrap; 
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+	justify-content: center; 
+	align-items: center; 
+	flex-flow: row wrap; 
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
 }
 
 
+/**** Header Styles *****/
+
+header {
+    background: url("../img/bg-mobile.svg") no-repeat; 
+    background-size: cover;
+    display: flex;
+	justify-content: center; 
+	align-items: center;
+	flex-flow: row wrap;
+ 
+}
+
+.logo, .mockups {
+    width: 100%;
+}
+
+.logo img {
+    width: 45%;
+    height: 50%;
+    padding-top: 5%;
+}
+
+.mockups img {
+    width: 100%;
+    height: 100%;
+    padding-top: 20%;
+}
+
+/***** Main Styles *****/
+
+main {
+    display: flex;
+	justify-content: center; 
+	align-items: center; 
+	flex-flow: row wrap;
+}
+
+#main-content h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 3.5rem;
+    text-align: center;
+    padding-left: 5%;
+}
+
+
+#main-content p {
+    font-weight: 400;
+    line-height: 2rem;
+    text-align: center;
+    padding-left: 5%;
+
+}
+
+/***** Button Styles *****/
+
+.register {
+    text-align: center;
+    margin-left: 30%;
+    color: hsl(257, 40%, 49%);
+    background-color: #ffffff;
+    width: 45%;
+    padding: 2%;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+
+/***** Footer Styles *****/
+
+footer {
+    margin-top: 15%;
+    
+}
+
+.social-media {
+    text-align: center;
+    padding-left: 5%;
+}
+
+.social-media i {
+    color: #ffffff;
+    font-size: 1.5rem;
+    padding: 2%;
+}
+
 .attribution { 
-    font-size: 11px; text-align: center; 
+    font-size: 11px; 
+    text-align: center; 
 }
 
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    color: #ffffff;
+
+}
+/***** Media Queries *****/
+
+/******* Desktop Version *******/
+
+@media all and (min-width: 1200px){
+
+    body {
+        background: url("../img/bg-desktop.svg") no-repeat  hsl(257, 40%, 49%); 
+        background: cover;
+    }
+
+    header {
+        background: transparent;
+    }
+
+    main {
+        text-align: left;
+    }
+
+    header {
+        flex-flow: column;
+        width: 45%;
+    }
+
+    main {
+        width: 45%;
+        padding-top: 10%;
+        margin-left: 5%;
+    }
+
+    #main-content h1 {
+        font-size: 3rem;
+        line-height: 3.5rem;
+        text-align: left;
+        padding-left: 5%;
+    }
+    
+    
+    #main-content p {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        text-align: left;
+        padding-left: 5%;
+    
+    }
+
+
+    .register {
+        text-align: center;
+        padding: 2%;
+        width: 25%;
+        margin-left: 5%;
+    }
+
+    footer {
+        width: 100%;
+        margin-top: 0;
+    }
+    
+    .social-media {
+        text-align: right;
+        padding-left: 5%;
+    }
+    
+
 }
